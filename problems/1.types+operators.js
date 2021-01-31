@@ -3,10 +3,12 @@
 * @returns {boolean} - Is val a number
 */
 function isNumber(val) {
-if( val = number){
+if (typeof val === 'number'){
   return true
 }
-console.log(isNumber(3))
+else{
+  return false
+}
 }
 
 /** Takes in a value and returns whether it is truthy
@@ -16,6 +18,9 @@ console.log(isNumber(3))
 function isTruthy(val) {
 if(val){
   return true
+}
+else {
+  return false
 }
 }
 

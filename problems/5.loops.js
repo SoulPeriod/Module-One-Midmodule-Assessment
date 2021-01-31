@@ -4,13 +4,12 @@
 */
 function evenNumbers(num) {
   let array = []
-  let i=0
- for ( i = 0; i <= num; i+=2){
+  for ( let i = 0; i <= num; i+=2){
    array.push(i)
  }
  return array
 }
-
+console.log(evenNumbers(20))
 
 /** Returns all multiples of a given number up to 1000
  * Example if num was 3 the output would be [0, 3, 6, 9, 12, ...etc ] until 1000
@@ -20,11 +19,12 @@ function evenNumbers(num) {
 function multiplesToOneThousand(num) {
   let array= []
   let i = 0
- for(i = 0; i <=1000; i+num){
-   array.push(i)
+ for(i = 0; i * num < 1000 ; i++){
+   array.push(i * num)
  }
  return array
 }
+console.log(multiplesToOneThousand(20)) //log the multiples of 20 up to 1000
 
 
 /** Returns the first n powers of 2 (starting at 0)
@@ -36,9 +36,14 @@ function multiplesToOneThousand(num) {
 */
 function powersOfTwo(count) {
   let array = []
-  let i =0
-
+  let power = 0 
+for(power = 0; power < count; power++) {
+  //console.log(Math.pow(2,power));
+  array.push(Math.pow(2,power))
 }
+return array
+}
+console.log( powersOfTwo(6))
 
 module.exports = {
   evenNumbers,

@@ -16,7 +16,7 @@ else{
 * @returns {string} - A message about the temperature
 */
 function temperatureMessageUsingTernary(temp) {
-temp < 32 ? "It's Freezing!": "It's alright"
+return temp < 32 ? "It's freezing!" : "It's alright"
 }
 
 
@@ -31,9 +31,8 @@ if(age >= 65){
 else if (age >= 18){
   return "You are an adult"
 }
-else{
-  "You are a minor"
-}
+return "You are a minor"
+
 
 }
 
